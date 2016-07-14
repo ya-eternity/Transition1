@@ -15,6 +15,8 @@
 		FEB0E7391D3780730038C2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB0E7371D3780730038C2C9 /* LaunchScreen.storyboard */; };
 		FEB0E7441D3780730038C2C9 /* Transition1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB0E7431D3780730038C2C9 /* Transition1Tests.m */; };
 		FEB0E74F1D3780730038C2C9 /* Transition1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB0E74E1D3780730038C2C9 /* Transition1UITests.m */; };
+		FEB0E7671D3789140038C2C9 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB0E7651D3789140038C2C9 /* CollectionViewCell.m */; };
+		FEB0E7681D3789140038C2C9 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB0E7661D3789140038C2C9 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		FEB0E74A1D3780730038C2C9 /* Transition1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Transition1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB0E74E1D3780730038C2C9 /* Transition1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transition1UITests.m; sourceTree = "<group>"; };
 		FEB0E7501D3780730038C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEB0E7641D3789140038C2C9 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		FEB0E7651D3789140038C2C9 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		FEB0E7661D3789140038C2C9 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				FEB0E72D1D3780730038C2C9 /* AppDelegate.m */,
 				FEB0E72F1D3780730038C2C9 /* ViewController.h */,
 				FEB0E7301D3780730038C2C9 /* ViewController.m */,
+				FEB0E7641D3789140038C2C9 /* CollectionViewCell.h */,
+				FEB0E7651D3789140038C2C9 /* CollectionViewCell.m */,
+				FEB0E7661D3789140038C2C9 /* CollectionViewCell.xib */,
 				FEB0E7321D3780730038C2C9 /* Main.storyboard */,
 				FEB0E7351D3780730038C2C9 /* Assets.xcassets */,
 				FEB0E7371D3780730038C2C9 /* LaunchScreen.storyboard */,
@@ -245,6 +253,7 @@
 			files = (
 				FEB0E7391D3780730038C2C9 /* LaunchScreen.storyboard in Resources */,
 				FEB0E7361D3780730038C2C9 /* Assets.xcassets in Resources */,
+				FEB0E7681D3789140038C2C9 /* CollectionViewCell.xib in Resources */,
 				FEB0E7341D3780730038C2C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +281,7 @@
 			files = (
 				FEB0E7311D3780730038C2C9 /* ViewController.m in Sources */,
 				FEB0E72E1D3780730038C2C9 /* AppDelegate.m in Sources */,
+				FEB0E7671D3789140038C2C9 /* CollectionViewCell.m in Sources */,
 				FEB0E72B1D3780730038C2C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
