@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewCell"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="xKA-cJ-ovn" customClass="CollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="xKA-cJ-ovn" customClass="CollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -16,21 +16,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjq-eo-xZy">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons" translatesAutoresizingMaskIntoConstraints="NO" id="1tP-tc-wuC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons.png" translatesAutoresizingMaskIntoConstraints="NO" id="1tP-tc-wuC">
                                 <rect key="frame" x="20" y="287" width="116" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="iJr-QC-IVQ"/>
                                     <constraint firstAttribute="height" constant="40" id="iWv-2S-tsv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="lru-By-zS9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots.png" translatesAutoresizingMaskIntoConstraints="NO" id="lru-By-zS9">
                                 <rect key="frame" x="228" y="298" width="4" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="hap-Z2-BkM"/>
                                     <constraint firstAttribute="width" constant="4" id="kl3-od-Bes"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-0T-OHc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-0T-OHc">
                                 <rect key="frame" x="159" y="266" width="77" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="D9h-Ou-XVh"/>
@@ -65,11 +65,17 @@
                             <constraint firstItem="lru-By-zS9" firstAttribute="centerY" secondItem="1tP-tc-wuC" secondAttribute="centerY" id="vbe-IR-dwl"/>
                             <constraint firstAttribute="width" constant="256" id="zXn-nf-L05"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-m9-Sxo">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item0" translatesAutoresizingMaskIntoConstraints="NO" id="3Nk-ox-GAS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item0.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Nk-ox-GAS">
                                 <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATCOASTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-aq-MLo">
@@ -103,7 +109,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmg-iX-rQI" userLabel="CenterView">
                                 <rect key="frame" x="119" y="293" width="20" height="32"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6Au-ql-bSf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Au-ql-bSf">
                                         <rect key="frame" x="2" y="7" width="15" height="18"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" staticText="YES"/>
@@ -164,6 +170,12 @@
                             <constraint firstAttribute="bottom" secondItem="3Nk-ox-GAS" secondAttribute="bottom" id="rTx-fC-qGo"/>
                             <constraint firstItem="MC9-mX-NHt" firstAttribute="leading" secondItem="HiF-m9-Sxo" secondAttribute="leading" constant="8" id="whE-mN-2I9"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -177,23 +189,22 @@
             </constraints>
             <size key="customSize" width="275" height="575"/>
             <connections>
-                <outlet property="backConstraintY" destination="1zY-1F-q7F" id="Bts-hT-nu6"/>
                 <outlet property="backContainerView" destination="Jjq-eo-xZy" id="lU8-M5-wSA"/>
-                <outlet property="backgroundImageView" destination="3Nk-ox-GAS" id="izT-2T-zTS"/>
-                <outlet property="bgImage" destination="3Nk-ox-GAS" id="cXF-jD-eFt"/>
-                <outlet property="customTitle" destination="fx8-aq-MLo" id="SgP-iw-NbY"/>
-                <outlet property="frontConstraintY" destination="ND9-nx-jlf" id="Jhd-HE-efR"/>
+                <outlet property="backViewCenterY" destination="1zY-1F-q7F" id="fPr-fX-Ii7"/>
+                <outlet property="backViewHeight" destination="Fhu-0z-tYd" id="V5Q-aI-cSe"/>
+                <outlet property="backViewWidth" destination="zXn-nf-L05" id="sHy-fW-RjD"/>
+                <outlet property="bgImage" destination="3Nk-ox-GAS" id="0r2-lX-8Xk"/>
                 <outlet property="frontContainerView" destination="HiF-m9-Sxo" id="hIj-AY-w1m"/>
-                <outlet property="title" destination="fx8-aq-MLo" id="tUa-Jx-Zrt"/>
+                <outlet property="frontViewCenterY" destination="ND9-nx-jlf" id="Lpt-xQ-h6D"/>
+                <outlet property="title" destination="fx8-aq-MLo" id="ZMF-EJ-cCQ"/>
             </connections>
             <point key="canvasLocation" x="310" y="480.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dots" width="4" height="19"/>
-        <image name="icons" width="116" height="39"/>
-        <image name="item0" width="414" height="736"/>
-        <image name="pinIcon" width="26" height="32"/>
-        <image name="stars" width="77" height="11"/>
+        <image name="dots.png" width="8" height="38"/>
+        <image name="icons.png" width="233" height="79"/>
+        <image name="item0.png" width="828" height="1472"/>
+        <image name="stars.png" width="154" height="23"/>
     </resources>
 </document>

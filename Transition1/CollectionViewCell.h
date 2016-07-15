@@ -11,8 +11,18 @@
 @interface CollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
-@property (weak, nonatomic) IBOutlet UIImageView *bgImage;
+@property (strong, nonatomic) IBOutlet UIImageView *bgImage;
 @property (weak, nonatomic) IBOutlet UIView *backContainerView;
 @property (weak, nonatomic) IBOutlet UIView *frontContainerView;
+
+@property (assign, nonatomic) BOOL isOpen;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *frontViewCenterY;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewCenterY;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *backViewWidth;
+
+- (void)openAnimated:(BOOL)animated;
+- (void)closeAnimated:(BOOL)animated;
 
 @end
