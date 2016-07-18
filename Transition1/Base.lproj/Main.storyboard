@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -38,7 +39,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="searchIcon" id="fML-mx-w2a"/>
                         <view key="titleView" contentMode="scaleToFill" id="FXy-a5-9qp">
-                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <rect key="frame" x="270" y="6" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-qW-H6I">
@@ -58,10 +59,379 @@
             </objects>
             <point key="canvasLocation" x="23" y="265"/>
         </scene>
+        <!--Demo Table View Controller-->
+        <scene sceneID="oBl-ak-1c8">
+            <objects>
+                <tableViewController storyboardIdentifier="DemoTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="wbr-QE-JhD" customClass="DemoTableViewController" customModule="DemoExpandingCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vdm-wZ-Wjb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Pnu-HE-rMF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="124" id="LfI-20-tsm">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LfI-20-tsm" id="j1d-OJ-LpJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="ege-Ft-Saw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="hBh-Fq-thU">
+                                                    <rect key="frame" x="40" y="92" width="77" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="Wcu-k7-RLJ"/>
+                                                        <constraint firstAttribute="width" constant="77" id="v1i-o4-tGr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Crescenta-Montrose, CA91020 Glendale NO. 7911847" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j4-2g-BAk">
+                                                    <rect key="frame" x="40" y="48" width="552" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.49803921569999998" green="0.51764705879999995" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0j4-2g-BAk" firstAttribute="centerY" secondItem="j1d-OJ-LpJ" secondAttribute="centerY" id="9JP-KR-rcB"/>
+                                                <constraint firstItem="0j4-2g-BAk" firstAttribute="leading" secondItem="j1d-OJ-LpJ" secondAttribute="leading" constant="40" id="ETF-9a-Ykt"/>
+                                                <constraint firstItem="ege-Ft-Saw" firstAttribute="top" secondItem="j1d-OJ-LpJ" secondAttribute="top" id="O7M-vF-vK5"/>
+                                                <constraint firstAttribute="bottom" secondItem="ege-Ft-Saw" secondAttribute="bottom" id="Wvk-mL-K4u"/>
+                                                <constraint firstItem="hBh-Fq-thU" firstAttribute="leading" secondItem="j1d-OJ-LpJ" secondAttribute="leading" constant="40" id="Y64-oF-KC3"/>
+                                                <constraint firstItem="ege-Ft-Saw" firstAttribute="leading" secondItem="j1d-OJ-LpJ" secondAttribute="leading" id="Ywn-04-qgt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0j4-2g-BAk" secondAttribute="trailing" id="gQh-rB-Bo4"/>
+                                                <constraint firstAttribute="trailing" secondItem="ege-Ft-Saw" secondAttribute="trailing" id="qWY-qr-BBb"/>
+                                                <constraint firstAttribute="bottom" secondItem="hBh-Fq-thU" secondAttribute="bottom" constant="20" id="rRQ-FH-DWS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="8fN-TV-VJd">
+                                        <rect key="frame" x="0.0" y="124" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8fN-TV-VJd" id="mOB-eX-lrE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face2" translatesAutoresizingMaskIntoConstraints="NO" id="0Ka-bJ-t6u">
+                                                    <rect key="frame" x="40" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ck5-1P-4Mq"/>
+                                                        <constraint firstAttribute="width" constant="40" id="yJJ-xB-4V1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heand" translatesAutoresizingMaskIntoConstraints="NO" id="ZFS-wZ-9O3">
+                                                    <rect key="frame" x="524" y="34" width="14" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Allan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-PC-6eV">
+                                                    <rect key="frame" x="108" y="31" width="74" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNf-Mt-7PL">
+                                                    <rect key="frame" x="219" y="34" width="43" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaO-yS-9Mk">
+                                                    <rect key="frame" x="40" y="57" width="498" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="gvJ-80-9Cg"/>
+                                                    </constraints>
+                                                    <string key="text">The federal beach atc requires states that receive funding to develop a risk-based beach evaluation and classification plan and apply it to</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eDr-PC-6eV" firstAttribute="centerY" secondItem="0Ka-bJ-t6u" secondAttribute="centerY" id="5j0-YG-Cdl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XaO-yS-9Mk" secondAttribute="bottom" id="6AD-Np-5ib"/>
+                                                <constraint firstAttribute="trailing" secondItem="XaO-yS-9Mk" secondAttribute="trailing" constant="62" id="FD1-34-HVv"/>
+                                                <constraint firstItem="XaO-yS-9Mk" firstAttribute="leading" secondItem="mOB-eX-lrE" secondAttribute="leading" constant="40" id="SS1-8p-Mck"/>
+                                                <constraint firstItem="0Ka-bJ-t6u" firstAttribute="top" secondItem="mOB-eX-lrE" secondAttribute="top" constant="20" id="SUV-kr-oe6"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZFS-wZ-9O3" secondAttribute="trailing" constant="62" id="e1L-Ac-2Uq"/>
+                                                <constraint firstItem="BNf-Mt-7PL" firstAttribute="leading" secondItem="eDr-PC-6eV" secondAttribute="trailing" constant="37" id="eFJ-av-VVI"/>
+                                                <constraint firstItem="eDr-PC-6eV" firstAttribute="leading" secondItem="0Ka-bJ-t6u" secondAttribute="trailing" constant="28" id="kzu-eK-vOQ"/>
+                                                <constraint firstItem="ZFS-wZ-9O3" firstAttribute="centerY" secondItem="0Ka-bJ-t6u" secondAttribute="centerY" id="mba-i9-P4k"/>
+                                                <constraint firstItem="BNf-Mt-7PL" firstAttribute="centerY" secondItem="eDr-PC-6eV" secondAttribute="centerY" id="x16-wS-Czr"/>
+                                                <constraint firstItem="0Ka-bJ-t6u" firstAttribute="leading" secondItem="mOB-eX-lrE" secondAttribute="leading" constant="40" id="xuX-jV-XRd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="uIY-wv-Ail">
+                                        <rect key="frame" x="0.0" y="248" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uIY-wv-Ail" id="JR0-Tg-mQH">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="XJB-th-N37">
+                                                    <rect key="frame" x="40" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="7ij-dm-JWA"/>
+                                                        <constraint firstAttribute="width" constant="40" id="g1w-Tb-RLl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heand" translatesAutoresizingMaskIntoConstraints="NO" id="Oah-xv-ZAV">
+                                                    <rect key="frame" x="524" y="34" width="14" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amada Iin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCq-UX-t8k">
+                                                    <rect key="frame" x="108" y="31" width="68" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmc-1q-hbM">
+                                                    <rect key="frame" x="213" y="34" width="43" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-mp-4mY">
+                                                    <rect key="frame" x="40" y="57" width="498" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="UqI-1W-NNO"/>
+                                                    </constraints>
+                                                    <string key="text">The federal beach atc requires states that receive funding to develop a risk-based beach evaluation and classification plan and apply it to</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Oah-xv-ZAV" firstAttribute="centerY" secondItem="XJB-th-N37" secondAttribute="centerY" id="Fdu-wK-1UB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oah-xv-ZAV" secondAttribute="trailing" constant="62" id="Gm0-Ak-sXu"/>
+                                                <constraint firstItem="lCq-UX-t8k" firstAttribute="centerY" secondItem="XJB-th-N37" secondAttribute="centerY" id="Hla-LA-X7v"/>
+                                                <constraint firstItem="vmc-1q-hbM" firstAttribute="leading" secondItem="lCq-UX-t8k" secondAttribute="trailing" constant="37" id="KT0-Od-eXN"/>
+                                                <constraint firstItem="XJB-th-N37" firstAttribute="leading" secondItem="JR0-Tg-mQH" secondAttribute="leading" constant="40" id="Ngs-53-tAL"/>
+                                                <constraint firstItem="XJB-th-N37" firstAttribute="top" secondItem="JR0-Tg-mQH" secondAttribute="top" constant="20" id="Tcd-bb-hOR"/>
+                                                <constraint firstItem="dr7-mp-4mY" firstAttribute="leading" secondItem="JR0-Tg-mQH" secondAttribute="leading" constant="40" id="aMl-ew-59F"/>
+                                                <constraint firstItem="vmc-1q-hbM" firstAttribute="centerY" secondItem="lCq-UX-t8k" secondAttribute="centerY" id="dvV-qR-bhi"/>
+                                                <constraint firstItem="lCq-UX-t8k" firstAttribute="leading" secondItem="XJB-th-N37" secondAttribute="trailing" constant="28" id="mpV-dz-L7V"/>
+                                                <constraint firstAttribute="trailing" secondItem="dr7-mp-4mY" secondAttribute="trailing" constant="62" id="vDM-2C-MIS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dr7-mp-4mY" secondAttribute="bottom" id="vGi-sF-eh4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="oWi-lC-bFL">
+                                        <rect key="frame" x="0.0" y="372" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oWi-lC-bFL" id="X3m-DU-3gg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face2" translatesAutoresizingMaskIntoConstraints="NO" id="5Qf-4r-Q4J">
+                                                    <rect key="frame" x="40" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="GfJ-rD-xCc"/>
+                                                        <constraint firstAttribute="width" constant="40" id="c9w-qP-fkm"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heand" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-Tg-noi">
+                                                    <rect key="frame" x="524" y="34" width="14" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Allan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7y-36-XXd">
+                                                    <rect key="frame" x="108" y="31" width="74" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PO-Xt-K30">
+                                                    <rect key="frame" x="219" y="34" width="43" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-8D-tKC">
+                                                    <rect key="frame" x="40" y="57" width="498" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="hIa-6V-arj"/>
+                                                    </constraints>
+                                                    <string key="text">The federal beach atc requires states that receive funding to develop a risk-based beach evaluation and classification plan and apply it to</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J7y-36-XXd" firstAttribute="centerY" secondItem="5Qf-4r-Q4J" secondAttribute="centerY" id="9IU-Zd-DhJ"/>
+                                                <constraint firstItem="5Qf-4r-Q4J" firstAttribute="top" secondItem="X3m-DU-3gg" secondAttribute="top" constant="20" id="Evc-aG-hoS"/>
+                                                <constraint firstItem="5PO-Xt-K30" firstAttribute="centerY" secondItem="J7y-36-XXd" secondAttribute="centerY" id="IL6-V5-eof"/>
+                                                <constraint firstItem="5Qf-4r-Q4J" firstAttribute="leading" secondItem="X3m-DU-3gg" secondAttribute="leading" constant="40" id="KdO-p1-jcQ"/>
+                                                <constraint firstItem="hsE-Tg-noi" firstAttribute="centerY" secondItem="5Qf-4r-Q4J" secondAttribute="centerY" id="LVD-ym-w44"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QQX-8D-tKC" secondAttribute="bottom" id="VFG-Dl-38i"/>
+                                                <constraint firstItem="J7y-36-XXd" firstAttribute="leading" secondItem="5Qf-4r-Q4J" secondAttribute="trailing" constant="28" id="X9Y-0r-oqt"/>
+                                                <constraint firstAttribute="trailing" secondItem="hsE-Tg-noi" secondAttribute="trailing" constant="62" id="tQe-QW-t28"/>
+                                                <constraint firstItem="QQX-8D-tKC" firstAttribute="leading" secondItem="X3m-DU-3gg" secondAttribute="leading" constant="40" id="vPm-Tl-hVc"/>
+                                                <constraint firstItem="5PO-Xt-K30" firstAttribute="leading" secondItem="J7y-36-XXd" secondAttribute="trailing" constant="37" id="vd6-lG-r93"/>
+                                                <constraint firstAttribute="trailing" secondItem="QQX-8D-tKC" secondAttribute="trailing" constant="62" id="wxM-gT-K1j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="7kL-EK-gX3">
+                                        <rect key="frame" x="0.0" y="496" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7kL-EK-gX3" id="fc9-OQ-ZgZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face1" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-hc-ENF">
+                                                    <rect key="frame" x="40" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Syo-zq-jIv"/>
+                                                        <constraint firstAttribute="width" constant="40" id="W3F-hK-Rol"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heand" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-bP-UfB">
+                                                    <rect key="frame" x="524" y="34" width="14" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amada Iin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT6-w9-CM3">
+                                                    <rect key="frame" x="108" y="31" width="68" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akx-GA-cv1">
+                                                    <rect key="frame" x="213" y="34" width="43" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDB-5g-hMJ">
+                                                    <rect key="frame" x="40" y="57" width="498" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="Cpm-Y2-53W"/>
+                                                    </constraints>
+                                                    <string key="text">The federal beach atc requires states that receive funding to develop a risk-based beach evaluation and classification plan and apply it to</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jT6-w9-CM3" firstAttribute="centerY" secondItem="UEg-hc-ENF" secondAttribute="centerY" id="3wx-tk-5rT"/>
+                                                <constraint firstItem="LDB-5g-hMJ" firstAttribute="leading" secondItem="fc9-OQ-ZgZ" secondAttribute="leading" constant="40" id="Ndv-pF-qdA"/>
+                                                <constraint firstItem="akx-GA-cv1" firstAttribute="leading" secondItem="jT6-w9-CM3" secondAttribute="trailing" constant="37" id="RFb-aI-n8p"/>
+                                                <constraint firstItem="ga0-bP-UfB" firstAttribute="centerY" secondItem="UEg-hc-ENF" secondAttribute="centerY" id="T3Q-3o-4xc"/>
+                                                <constraint firstItem="UEg-hc-ENF" firstAttribute="top" secondItem="fc9-OQ-ZgZ" secondAttribute="top" constant="20" id="Ts4-Vy-KeD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LDB-5g-hMJ" secondAttribute="bottom" id="Ueh-aI-yO1"/>
+                                                <constraint firstItem="akx-GA-cv1" firstAttribute="centerY" secondItem="jT6-w9-CM3" secondAttribute="centerY" id="XgC-Nl-u9n"/>
+                                                <constraint firstAttribute="trailing" secondItem="LDB-5g-hMJ" secondAttribute="trailing" constant="62" id="cE6-uq-spI"/>
+                                                <constraint firstItem="jT6-w9-CM3" firstAttribute="leading" secondItem="UEg-hc-ENF" secondAttribute="trailing" constant="28" id="fOq-vo-eHS"/>
+                                                <constraint firstAttribute="trailing" secondItem="ga0-bP-UfB" secondAttribute="trailing" constant="62" id="nCM-Wa-MSG"/>
+                                                <constraint firstItem="UEg-hc-ENF" firstAttribute="leading" secondItem="fc9-OQ-ZgZ" secondAttribute="leading" constant="40" id="rHz-Ku-N5g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="tIe-Sx-ut6">
+                                        <rect key="frame" x="0.0" y="620" width="600" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tIe-Sx-ut6" id="ggN-j5-zmY">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face2" translatesAutoresizingMaskIntoConstraints="NO" id="ahj-0S-o5o">
+                                                    <rect key="frame" x="40" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="W1X-vg-uEn"/>
+                                                        <constraint firstAttribute="height" constant="40" id="lO8-GC-CYV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heand" translatesAutoresizingMaskIntoConstraints="NO" id="PPb-uv-U0j">
+                                                    <rect key="frame" x="524" y="34" width="14" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Allan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAR-j7-m5S">
+                                                    <rect key="frame" x="108" y="31" width="74" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEB 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-HK-lna">
+                                                    <rect key="frame" x="219" y="34" width="43" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri6-af-b2R">
+                                                    <rect key="frame" x="40" y="57" width="498" height="59"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="yma-8P-gvu"/>
+                                                    </constraints>
+                                                    <string key="text">The federal beach atc requires states that receive funding to develop a risk-based beach evaluation and classification plan and apply it to</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KmL-HK-lna" firstAttribute="leading" secondItem="fAR-j7-m5S" secondAttribute="trailing" constant="37" id="2g0-T0-dbn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ri6-af-b2R" secondAttribute="bottom" id="5UP-rX-Fy1"/>
+                                                <constraint firstItem="PPb-uv-U0j" firstAttribute="centerY" secondItem="ahj-0S-o5o" secondAttribute="centerY" id="A2q-he-SDR"/>
+                                                <constraint firstItem="ahj-0S-o5o" firstAttribute="top" secondItem="ggN-j5-zmY" secondAttribute="top" constant="20" id="CsS-Sp-RKd"/>
+                                                <constraint firstItem="fAR-j7-m5S" firstAttribute="leading" secondItem="ahj-0S-o5o" secondAttribute="trailing" constant="28" id="NKY-ZC-geM"/>
+                                                <constraint firstAttribute="trailing" secondItem="PPb-uv-U0j" secondAttribute="trailing" constant="62" id="Peh-MI-oRw"/>
+                                                <constraint firstAttribute="trailing" secondItem="ri6-af-b2R" secondAttribute="trailing" constant="62" id="alh-dV-2DP"/>
+                                                <constraint firstItem="KmL-HK-lna" firstAttribute="centerY" secondItem="fAR-j7-m5S" secondAttribute="centerY" id="b0u-OX-wcS"/>
+                                                <constraint firstItem="ahj-0S-o5o" firstAttribute="leading" secondItem="ggN-j5-zmY" secondAttribute="leading" constant="40" id="byN-wf-y1t"/>
+                                                <constraint firstItem="fAR-j7-m5S" firstAttribute="centerY" secondItem="ahj-0S-o5o" secondAttribute="centerY" id="gRr-Cj-Ca3"/>
+                                                <constraint firstItem="ri6-af-b2R" firstAttribute="leading" secondItem="ggN-j5-zmY" secondAttribute="leading" constant="40" id="yd6-Wp-ydL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="wbr-QE-JhD" id="e2t-H1-Epr"/>
+                            <outlet property="delegate" destination="wbr-QE-JhD" id="s5W-x2-tGI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="FK2-Ho-usy">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="searchIcon" id="xMS-Hq-10C"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Fif-4f-vqn" userLabel="Item View">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="DAd-Hl-Xgj">
+                                    <rect key="frame" x="95" y="9" width="51" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="51" id="LLF-IQ-yWq"/>
+                                        <constraint firstAttribute="height" constant="16" id="eC5-fY-6cP"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="DAd-Hl-Xgj" firstAttribute="centerY" secondItem="Fif-4f-vqn" secondAttribute="centerY" id="ggo-eV-Qbe"/>
+                                <constraint firstItem="DAd-Hl-Xgj" firstAttribute="centerX" secondItem="Fif-4f-vqn" secondAttribute="centerX" id="rVh-Xa-03u"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="CloseButton" id="4qR-3H-JIe">
+                            <connections>
+                                <action selector="backButtonHandler:" destination="wbr-QE-JhD" id="40m-YL-0v4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlb-uW-Eyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="428"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CloseButton" width="20" height="20"/>
         <image name="Title" width="51" height="16"/>
+        <image name="face1" width="20" height="20"/>
+        <image name="face2" width="20" height="20"/>
+        <image name="heand" width="20" height="20"/>
         <image name="locationButton" width="20" height="20"/>
+        <image name="map" width="20" height="20"/>
         <image name="searchIcon" width="20" height="20"/>
+        <image name="stars" width="20" height="20"/>
     </resources>
 </document>

@@ -100,6 +100,12 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ColectionModel *model = _dataSource[indexPath.item];
+    
+}
+
 - (void)openCell
 {
     NSLog(@"open cell");
@@ -109,6 +115,8 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
     
     ColectionModel *model = _dataSource[index];
     if (model.isOpen) {
+        //跳转下一个页面
+        
         return;
     }
     
@@ -125,6 +133,8 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
     if (!model.isOpen) {
         return;
     }
+    
+    
     
     model.isOpen = NO;
     [cell closeAnimated:YES];

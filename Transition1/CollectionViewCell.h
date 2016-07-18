@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bgImage;
 @property (weak, nonatomic) IBOutlet UIView *backContainerView;
 @property (weak, nonatomic) IBOutlet UIView *frontContainerView;
+@property (weak, nonatomic) IBOutlet UIView *shadowView;
 
 @property (assign, nonatomic) BOOL isOpen;
 

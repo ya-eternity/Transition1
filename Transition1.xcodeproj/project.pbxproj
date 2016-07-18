@@ -37,6 +37,7 @@
 		FEBFF61F1D38B1080047749B /* item1.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBFF61E1D38B1080047749B /* item1.png */; };
 		FEBFF6211D38B1160047749B /* item2.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBFF6201D38B1160047749B /* item2.png */; };
 		FEBFF6231D38B1210047749B /* item3.png in Resources */ = {isa = PBXBuildFile; fileRef = FEBFF6221D38B1210047749B /* item3.png */; };
+		FEE261EB1D3CD497009F333E /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE261EA1D3CD497009F333E /* AnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		FEBFF61E1D38B1080047749B /* item1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item1.png; sourceTree = "<group>"; };
 		FEBFF6201D38B1160047749B /* item2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item2.png; sourceTree = "<group>"; };
 		FEBFF6221D38B1210047749B /* item3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item3.png; sourceTree = "<group>"; };
+		FEE261E91D3CD497009F333E /* AnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
+		FEE261EA1D3CD497009F333E /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				FEB0E72D1D3780730038C2C9 /* AppDelegate.m */,
 				FEB0E72F1D3780730038C2C9 /* ViewController.h */,
 				FEB0E7301D3780730038C2C9 /* ViewController.m */,
+				FEE261E91D3CD497009F333E /* AnimationController.h */,
+				FEE261EA1D3CD497009F333E /* AnimationController.m */,
 				FEB0E7641D3789140038C2C9 /* CollectionViewCell.h */,
 				FEB0E7651D3789140038C2C9 /* CollectionViewCell.m */,
 				FEB0E7661D3789140038C2C9 /* CollectionViewCell.xib */,
@@ -365,6 +370,7 @@
 				FEB0E7311D3780730038C2C9 /* ViewController.m in Sources */,
 				FEBFF6111D3871270047749B /* CustomLayout.m in Sources */,
 				FEB0E72E1D3780730038C2C9 /* AppDelegate.m in Sources */,
+				FEE261EB1D3CD497009F333E /* AnimationController.m in Sources */,
 				FEB0E7671D3789140038C2C9 /* CollectionViewCell.m in Sources */,
 				FEA68CF01D38D6380087ABD1 /* ColectionModel.m in Sources */,
 				FEB0E72B1D3780730038C2C9 /* main.m in Sources */,

@@ -22,6 +22,10 @@ static const CGFloat moveDistance = 60;
     [super awakeFromNib];
     self.clipsToBounds = NO;
     
+    _shadowView.layer.shadowRadius = 20;
+    _shadowView.layer.shadowColor = [UIColor grayColor].CGColor;
+    _shadowView.layer.shadowOffset = CGSizeMake(3, 4);
+    _shadowView.layer.shadowOpacity = 1;
     
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateMoveDistance)];
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
