@@ -10,10 +10,12 @@
 #import "CollectionViewCell.h"
 #import "CustomLayout.h"
 #import "ColectionModel.h"
+#import "AnimationController.h"
+#import "TableViewController.h"
 
 static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
 
-@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -24,6 +26,8 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.delegate = self;
     
     _dataSource = @[].mutableCopy;
     NSArray *titles = @[@"Boston", @"New York", @"San Francisco", @"Washington", @"Boston", @"New York", @"San Francisco", @"Washington"];
@@ -116,6 +120,8 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
     ColectionModel *model = _dataSource[index];
     if (model.isOpen) {
         //跳转下一个页面
+        TableViewController *tableVC = [TableViewController new];
+        [self.navigationController pushViewController:tableVC animated:YES];
         
         return;
     }
@@ -133,11 +139,17 @@ static NSString *const CollectionViewCellReuseID = @"CollectionViewCell";
     if (!model.isOpen) {
         return;
     }
-    
-    
-    
+        
     model.isOpen = NO;
     [cell closeAnimated:YES];
+}
+
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    AnimationController *anim = [[AnimationController alloc] initWithOperation:operation];
+    
+    return anim;
 }
 
 

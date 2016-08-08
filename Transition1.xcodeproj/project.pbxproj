@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE5E5F471D3DB96F0016046B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5E5F461D3DB96F0016046B /* TableViewController.m */; };
 		FEA68CE01D38D2B90087ABD1 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA68CD21D38D2B90087ABD1 /* Circle.png */; };
 		FEA68CE11D38D2B90087ABD1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA68CD31D38D2B90087ABD1 /* close.png */; };
 		FEA68CE21D38D2B90087ABD1 /* dots.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA68CD41D38D2B90087ABD1 /* dots.png */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE5E5F451D3DB96F0016046B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		FE5E5F461D3DB96F0016046B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		FEA68CD21D38D2B90087ABD1 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
 		FEA68CD31D38D2B90087ABD1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		FEA68CD41D38D2B90087ABD1 /* dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dots.png; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				FEB0E7301D3780730038C2C9 /* ViewController.m */,
 				FEE261E91D3CD497009F333E /* AnimationController.h */,
 				FEE261EA1D3CD497009F333E /* AnimationController.m */,
+				FE5E5F451D3DB96F0016046B /* TableViewController.h */,
+				FE5E5F461D3DB96F0016046B /* TableViewController.m */,
 				FEB0E7641D3789140038C2C9 /* CollectionViewCell.h */,
 				FEB0E7651D3789140038C2C9 /* CollectionViewCell.m */,
 				FEB0E7661D3789140038C2C9 /* CollectionViewCell.xib */,
@@ -284,7 +289,6 @@
 				TargetAttributes = {
 					FEB0E7251D3780730038C2C9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 786NH6D36V;
 					};
 					FEB0E73E1D3780730038C2C9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -374,6 +378,7 @@
 				FEB0E7671D3789140038C2C9 /* CollectionViewCell.m in Sources */,
 				FEA68CF01D38D6380087ABD1 /* ColectionModel.m in Sources */,
 				FEB0E72B1D3780730038C2C9 /* main.m in Sources */,
+				FE5E5F471D3DB96F0016046B /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,11 +521,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Transition1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sms.Transition1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -528,11 +535,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Transition1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sms.Transition1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
